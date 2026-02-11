@@ -57,7 +57,25 @@ class Program
 		Console.Clear();
 		Console.WriteLine("--- Sale Total Calculator ---");
 
-		// ENTER YOUR CODE HERE
+		Console.WriteLine("What is the product name of the item are you purchasing?");
+		string productname = Console.ReadLine();
+
+		Console.WriteLine($"How many {productname}'s do you want to buy?");
+		double amountofproduct = Convert.ToDouble(Console.ReadLine());
+
+		Console.WriteLine($"What is the price for each {productname}?");
+		double productprice = Convert.ToDouble(Console.ReadLine());
+
+		double tax = (8.50);
+
+		double subtotal = (amountofproduct * productprice);
+		double salestax = (subtotal * tax);
+		double total = (subtotal - tax);
+
+		Console.WriteLine($"Your subtotal is ${subtotal}.");
+		Console.WriteLine($"Your tax is ${tax}.");
+		Console.WriteLine($"Your total is ${total}.");
+
 
 
 
